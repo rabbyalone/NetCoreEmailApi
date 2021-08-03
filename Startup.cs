@@ -48,7 +48,7 @@ namespace NetCoreEmailApi
                 options.AddDefaultPolicy(
                     builder =>
                     {
-                        builder.WithOrigins("https://rabby.azurewebsites.net");
+                        builder.WithOrigins("https://rabby.azurewebsites.net").AllowAnyHeader().AllowAnyMethod();
                     });
             });
             services.AddTransient<IMailService, MailService>();
